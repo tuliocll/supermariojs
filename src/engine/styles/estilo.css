@@ -1,0 +1,92 @@
+
+@font-face {
+    font-family: 'pressStart';
+    src: url('../fonts/pressStart.ttf'); /* IE9 Compat Modes */
+    src: url('../fonts/pressStart.ttf') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/pressStart.ttf') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/pressStart.ttf') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/pressStart.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/pressStart.ttf') format('svg'); /* Legacy iOS */
+  }
+body{
+    font-family: 'pressStart', cursive;
+    background: #C6FFDD;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+/***************
+css minimal keyboard keys BY Rizky Kurniawan Ritonga
+check it on Codepen: https://codepen.io/rizkykurniawanritonga/pen/wospJ 
+***************/
+* { outline: none !important; }
+a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
+
+div.key
+{
+	width:35px;
+	height: 37px;
+	padding: 1px;
+	margin: 10px;
+}
+div.key > span
+{
+    background-color: #fff; /* only a modification */
+	display: block;
+	width: 35px;
+	height: 35px;
+	border: 1px solid #a9a9a9;
+	border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	font-size: 12px;
+	-moz-box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+	text-align: center;
+	padding-top: 10px;
+	color: #7c7c7c;
+	-webkit-box-shadow: 0px 3px 0px -2px rgba(255,255,255,1), 0px 2px 0px 0px rgba(169,169,169,1);
+	-moz-box-shadow: 0px 3px 0px -2px rgba(255,255,255,1), 0px 2px 0px 0px rgba(169,169,169,1);
+	box-shadow: 0px 3px 0px -2px rgba(255,255,255,1), 0px 2px 0px 0px rgba(169,169,169,1);
+	cursor: pointer;
+}
+
+div.key > span:hover
+{
+	background-color: #75b4fb;
+	border: 1px solid #5a88c5;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0px 3px 0px -2px rgba(117,180,251,1), 0px 2px 0px 0px rgba(90,136,197,1);
+	-moz-box-shadow: 0px 3px 0px -2px rgba(117,180,251,1), 0px 2px 0px 0px rgba(90,136,197,1);
+	box-shadow: 0px 3px 0px -2px rgba(117,180,251,1), 0px 2px 0px 0px rgba(90,136,197,1);
+	cursor: pointer;
+}
+
+div.key > span:active
+{
+	margin-top: 2px;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+div.key.special > span
+{
+	padding-top: 15px;
+	font-size: 11px;
+}
+
+div.key.icon > span
+{
+	font-size: 14px;
+}
+center > h4 { color: #c5c5c5; margin-top: 50px; }
+		body { margin: 0; font-family: Arial; background-color: #fff; }
+		ul#keys-freebie { display: table; list-style: none; margin: 0 auto; padding: 0; }
+		ul#keys-freebie > li { float: left; margin-right: 20px; margin-bottom: 20px; padding: 10px 10px; }
+		ul#keys-freebie > li:last-child { margin-right: 0; }
+		ul#keys-freebie > li > span { margin-bottom: 10px; }
