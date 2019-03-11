@@ -25,7 +25,7 @@ var backgroundAudio = new Audio('audio/smb_background.mp3');
 var audioJump = new Audio('audio/smb_jump-small.wav');
 var audioCoin = new Audio('audio/smb_coin.wav');
 //Some options
-var debug = false;
+var debug = true;
 var menu = true;
 //get the floor limit, i will use this for the 
 //death system in the future
