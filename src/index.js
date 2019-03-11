@@ -316,6 +316,9 @@ function controllerListener() {
             player.posX += player.velocity;
             playerAnim.direction = 1;
             if(playerAnim.index<playerAnim.framesRight.length){
+                if(debug){
+                    console.log("Frames right: " + playerAnim.framesRight + " frame atual: "+ playerSprite.src);
+                }
                 playerSprite.src = playerAnim.framesRight[playerAnim.index];
                 playerAnim.index++;
             }else{
