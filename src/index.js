@@ -68,6 +68,11 @@ var playerAnim = {
     width: 40,
     direction: 1,
 }
+
+preLoad(playerAnim.framesRight);
+preLoad(playerAnim.framesLeft);
+preLoad(playerAnim.framesJump);
+
 //Object that receive the player input
 //and store to use in the controller
 var keyMapController = {};
@@ -368,5 +373,16 @@ function controllerListener() {
             menu = false;
             startGame();
         }
+    }
+}
+
+
+//preload the images
+function preLoad(object){
+    var img = new Array();
+
+    for(var i=0; i < object.length; i++){
+        img[i] = new Image();
+        img[i].src = object[i];
     }
 }

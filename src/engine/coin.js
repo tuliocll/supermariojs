@@ -12,6 +12,7 @@ const Coin = function(x, y, finalPosY) {
     
     const coinValue = 200;
 
+    preLoad(coinFrames);
 
     return {
         //drop coin when hit the mistery box
@@ -23,4 +24,14 @@ const Coin = function(x, y, finalPosY) {
             
         }
     }
+
+    //preload the images
+    function preLoad(object){
+        var img = new Array();
+
+        for(var i=0; i < object.length; i++){
+            img[i] = new Image();
+            img[i].src = object[i];
+        }
+}
 }
