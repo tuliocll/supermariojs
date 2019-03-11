@@ -24,8 +24,9 @@ var objSceneCount = 0;
 var backgroundAudio = new Audio('audio/smb_background.mp3');
 var audioJump = new Audio('audio/smb_jump-small.wav');
 var audioCoin = new Audio('audio/smb_coin.wav');
-//Some options
-var debug = true;
+//Show some debug options on scren and on console
+var debug = false;
+//if menu is enabled or not
 var menu = true;
 //get the floor limit, i will use this for the 
 //death system in the future
@@ -321,9 +322,6 @@ function controllerListener() {
             player.posX += player.velocity;
             playerAnim.direction = 1;
             if(playerAnim.index<playerAnim.framesRight.length){
-                if(debug){
-                    console.log("Frames right: " + playerAnim.framesRight + " frame atual: "+ playerSprite.src);
-                }
                 playerSprite.src = playerAnim.framesRight[playerAnim.index];
                 playerAnim.index++;
             }else{
@@ -376,8 +374,44 @@ function controllerListener() {
     }
 }
 
+//this function is just for... fun ?
+function htmlControlls(button){
+    switch (button) {
+        case "right":
+        keyMapController[68] = true;
+            break;
+        case "left":
+        keyMapController[65] = true;
+            break;
+        case "jump":
+        keyMapController[87] = true;
+            break;
+        case "enter":
+        keyMapController[13] = true;
+            break;
+        case "":
+        keyMapController[68] = false;
+        keyMapController[65] = false;
+        keyMapController[87] = false;
+        keyMapController[13] = false;
+        break;
+    
+        default:
+            break;
+    }
+}
 
-//preload the images
+
+//Enable or disable debug
+//when click on page button
+function enableDebug(){
+    debug = (debug ? false : true);
+    if(!menu){
+        draw(player.posX, player.posY);
+    }
+}
+
+//Preload the images
 function preLoad(object){
     var img = new Array();
 

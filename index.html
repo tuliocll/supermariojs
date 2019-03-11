@@ -16,10 +16,22 @@
 
 
         <div class="col-md-12 text-center mt-2"> 
-                <div>
-                        <a class="github-button" href="https://github.com/tuliocll/supermariojs/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork tuliocll/supermariojs on GitHub">Fork</a>
-                        <a class="github-button" href="https://github.com/tuliocll/supermariojs" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star tuliocll/supermariojs on GitHub">Star</a>
-                        <a class="github-button" href="https://github.com/tuliocll" data-size="large" aria-label="Follow @tuliocll on GitHub">Follow @tuliocll</a>
+                <div class="row text-center">
+                       
+                    <div class="col-sm"></div>
+                              <div class="col-sm">
+                                    <a class="github-button" href="https://github.com/tuliocll/supermariojs/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork tuliocll/supermariojs on GitHub">Fork</a>
+                                    <a class="github-button" href="https://github.com/tuliocll/supermariojs" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star tuliocll/supermariojs on GitHub">Star</a>
+                                    <a class="github-button" href="https://github.com/tuliocll" data-size="large" aria-label="Follow @tuliocll on GitHub">Follow @tuliocll</a>
+                              </div>
+                              <div class="col-sm">
+                                    <div class="key special m-0 float-right noselect" onclick="enableDebug()">
+                                            <span>
+                                                Debug
+                                            </span>
+                                    </div>
+                              </div>
+              
                     </div>   
             <canvas id="jogo" width="500" height="600"></canvas>
         </div>
@@ -29,7 +41,7 @@
             <div style="font-family: pressStart; font-size: 34px">How to play</div>
             <div class="ml-5">
                     <p style="font-family: pressStart; font-size: 10px" class="mb-0 ml-5">jump</p>
-            <div class="key special ml-5">
+            <div class="key special ml-5 noselect" onmousedown="htmlControlls('jump')" onmouseup="htmlControlls('')">
                 <span>
                     W
                 </span>
@@ -40,23 +52,23 @@
                 <p style="font-family: pressStart; font-size: 10px" class="mb-0 ml-5">start</p>
             </div>
             <div class="row mt-0">
-                <div class="key special mt-0">
+                <div class="key special mt-0 noselect" onmousedown="htmlControlls('left')" onmouseup="htmlControlls('')" onmouseover="htmlControlls('')">
                     <span>
                         A
                     </span>
                 </div>
-                <div class="key special mt-0">
+                <div class="key special mt-0 noselect">
                     <span>
                         
                     </span>
                 </div>
-                <div class="key special mt-0">
+                <div class="key special mt-0 noselect" onmousedown="htmlControlls('right')" onmouseup="htmlControlls('')" onmouseover="htmlControlls('')">
                     <span>
                         D
                     </span>
                 </div>
 
-                <div class="key special mt-0 ml-5">
+                <div class="key special mt-0 ml-5 noselect" onmousedown="htmlControlls('enter')" onmouseup="htmlControlls('')" onmouseover="htmlControlls('')">
                     <span>
                         Enter
                     </span>
